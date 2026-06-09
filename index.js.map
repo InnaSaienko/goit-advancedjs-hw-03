@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
+{"version":3,"file":"index.js","sources":["../src/main.js"],"sourcesContent":["import render from \"./js/render-functions.js\"\nimport fetch from \"./js/pixabay-api.js\"\n\nconst form = document.querySelector(\"form\");\n\n"],"names":[],"mappings":"ssBAGa,SAAS,cAAc,MAAM"}
