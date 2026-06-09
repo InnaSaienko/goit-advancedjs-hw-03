@@ -15,7 +15,16 @@ export const showToast = (messageType) => {
 
 }
 
-export function showLoader() {}
+export function showLoader() {
+  const loader = document.createElement("div");
+  loader.classList.add("loader");
+  loader.textContent = "Loading images, please wait...";
+  document.body.appendChild(loader);
+  return loader;
+}
 
-export function hideLoader() {}
+export function hideLoader() {
+  const loader = document.querySelector(".loader");
+  loader.remove();
+}
 
