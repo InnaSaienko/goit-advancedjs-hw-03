@@ -5,7 +5,7 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-
+  --font-mont: "Montserrat";
   color: #242424;
   background-color: rgba(255, 255, 255, 0.87);
 
@@ -29,4 +29,37 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+
+.form {
+  display: flex;
+  margin: 36px auto;
+  align-content: center;
+  gap: 8px;
+
+  & input[type="text"] {
+    border: 1px solid #808080;
+    padding: 8px 16px;
+    padding-inline-end: 118px;
+
+
+    &::placeholder {
+      font-family: var(--font-mont), sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      color: #808080;
+    }
+
+  }
+
+  & button[type="submit"] {
+    background: #4e75ff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 91px;
+    height: 40px;
+  }
 }
