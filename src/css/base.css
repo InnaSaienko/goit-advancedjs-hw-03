@@ -87,6 +87,24 @@ img {
   }
 }
 
+
+.iziToast.iziToast-color-red {
+  padding: 20px;
+  background: #ef4040 !important;
+  border-color: #ef4040 !important;
+  width: 432px !important;
+  height: 88px !important;
+
+  & .iziToast-body {
+    margin: 0 auto;
+
+    & .iziToast-texts {
+      margin: 0;
+      padding-right: 2px;
+    }
+  }
+}
+
 .iziToast-title {
   color: #fff !important;
 }

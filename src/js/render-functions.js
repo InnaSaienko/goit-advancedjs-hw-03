@@ -5,23 +5,15 @@ import SimpleLightbox from 'simplelightbox';
 //Show message form according state
 const errorMessage = 'Sorry, there are no images matching your search query. Please try again!';
 const warningMessage = 'Sorry, no images match your search. Try again!';
-const customToastStyles = {
-  borderBottom: '2px solid #ffbebe',
-  borderRadius: '4px',
-  padding: '20px',
-  width: '432px',
-  height: '88px',
-  backgroundColor: '#ef4040',
-  color: '#fff',};
+
 const lightbox = new SimpleLightbox('.gallery a');
 const gallery = document.querySelector('.gallery');
 
 export const showToast = (messageType) => {
   const config = {
     title: messageType === 'warning' ? warningMessage : errorMessage,
-    position: 'topCenter',
+    position: 'topRight',
     timeout: 5000000,
-    ...customToastStyles,
   };
   return messageType === 'warning' ? iziToast.warning(config) : iziToast.error(config);
 
