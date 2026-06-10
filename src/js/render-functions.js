@@ -4,6 +4,7 @@ import SimpleLightbox from 'simplelightbox';
 //Show message form according state
 const errorMessage = 'Sorry, there are no images matching your search query. Please try again!';
 const warningMessage = 'Sorry, no images match your search. Try again!';
+
 const lightbox = new SimpleLightbox('.gallery a');
 const gallery = document.querySelector('.gallery');
 
@@ -28,7 +29,6 @@ export function showLoader() {
 export function hideLoader() {
   const loader = document.querySelector('.loader');
   loader.remove();
-
 }
 
 export function createGallery(images) {
