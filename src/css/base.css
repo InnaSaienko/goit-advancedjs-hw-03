@@ -17,6 +17,7 @@
 }
 
 body {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   min-width: 100vw;
@@ -30,6 +31,21 @@ main {
 main:has(.back-link) {
   text-align: center;
 }
+
+ul,
+ol, a, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 
 .loader {
   display: flex;
