@@ -11,6 +11,7 @@ async function onSubmit(e) {
   if (!query) return;
   clearGallery();
   showLoader();
+
   try {
     const data = await getImagesByQuery(query);
     if (data.hits.length === 0) {
