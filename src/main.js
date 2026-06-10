@@ -1,4 +1,4 @@
-import { createGallery, hideLoader, showLoader, showToast } from './js/render-functions.js';
+import { clearGallery, createGallery, hideLoader, showLoader, showToast } from './js/render-functions.js';
 import { getImagesByQuery } from './js/pixabay-api.js';
 
 const form = document.querySelector("form");
@@ -9,7 +9,7 @@ async function onSubmit(e) {
   e.preventDefault();
   const query = e.target.elements["search-text"].value.trim();
   if (!query) return;
-
+  clearGallery();
   showLoader();
   try {
     const data = await getImagesByQuery(query);
