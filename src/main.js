@@ -1,11 +1,9 @@
-import { hideLoader, showLoader, showToast } from './js/render-functions.js';
+import { createGallery, hideLoader, showLoader, showToast } from './js/render-functions.js';
 import { getImagesByQuery } from './js/pixabay-api.js';
 
 const form = document.querySelector("form");
 
 form.addEventListener("submit", onSubmit);
-
-
 
 async function onSubmit(e) {
   e.preventDefault();
@@ -19,7 +17,7 @@ async function onSubmit(e) {
       showToast("warning");
       return;
     }
-    render(data.hits);
+    createGallery(data.hits);
   } catch (error) {
     showToast("error");
   } finally {

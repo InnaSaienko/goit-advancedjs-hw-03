@@ -1,4 +1,5 @@
 import iziToast from "izitoast";
+import SimpleLightbox from "simplelightbox";
 
 //Show message form according state
 const errorMessage = "Sorry, there are no images matching your search query. Please try again!";
@@ -28,3 +29,30 @@ export function hideLoader() {
   loader.remove();
 }
 
+export function createGallery(images) {
+  const gallery = document.createElement("div");
+  const markUp = images.map(image =>
+    `<li className="gallery-item">
+      <a href={image.largeImageURL} className="gallery-link">
+        <img
+          src={image.webformatURL}
+          alt={image.tags}
+          className="gallery-image"
+        />
+        <div className="image-info">
+          <p><b>Likes:</b> ${image.likes}</p>
+          <p><b>Views:</b> ${image.views}</p>
+          <p><b>Comments:</b> ${image.comments}</p>
+          <p><b>Downloads:</b> ${image.downloads}</p>
+        </div>
+      </a>
+    </li>`
+  ).join("");
+
+  gallery.insertAdjacentHTML("beforeend", markUp);
+  const lightbox = new SimpleLightbox(".gallery a");
+  lightbox.refresh();
+}
+
+export function clearGallery() {
+}
