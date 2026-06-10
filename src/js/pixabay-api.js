@@ -1,10 +1,10 @@
 import axios from "axios"
 
-const BASE_URL = "https://pixabay.com/api/";
+axios.defaults.baseURL = "https://pixabay.com/api/";
 const API_KEY = import.meta.env.VITE_PIXABAY_API_KEY;
 
 export async function getImagesByQuery(query) {
-  const response = await axios.get(BASE_URL, {
+  const response = await axios.get(_, {
     params: {
       key: API_KEY,
       q: query,
