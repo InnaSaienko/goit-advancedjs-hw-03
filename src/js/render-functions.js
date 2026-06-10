@@ -13,7 +13,7 @@ export const showToast = (messageType) => {
   const config = {
     title: messageType === 'warning' ? warningMessage : errorMessage,
     position: 'topRight',
-    timeout: 5000000,
+    timeout: 5000,
   };
   return messageType === 'warning' ? iziToast.warning(config) : iziToast.error(config);
 
