@@ -16,9 +16,9 @@ async function onSubmit(e) {
     const data = await getImagesByQuery(query);
     if (data.hits.length === 0) {
       showToast("warning");
-      return;
+      // return;
     }
-    createGallery(data.hits);
+    // createGallery(data.hits);
   } catch (error) {
     showToast("error");
   } finally {
