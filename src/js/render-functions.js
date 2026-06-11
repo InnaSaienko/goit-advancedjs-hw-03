@@ -3,20 +3,22 @@ import 'izitoast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
 
 //Show message form according state
-const errorMessage = 'Sorry, there are no images matching your search query. Please try again!';
-const warningMessage = 'Sorry, no images match your search. Try again!';
-
+const messages = {
+  warning: "Sorry, there are no images matching your search query. Please try again!",
+  error: "An error occurred. Please try again later."
+};
 const lightbox = new SimpleLightbox('.gallery a');
 const gallery = document.querySelector('.gallery');
 
 export const showToast = (messageType) => {
   const config = {
-    title: messageType === 'warning' ? warningMessage : errorMessage,
+    title: messageType === 'warning' ? "No Images Found" : "Error",
+    message: messages[messageType],
     position: 'topRight',
     timeout: 5000,
   };
-  return messageType === 'warning' ? iziToast.warning(config) : iziToast.error(config);
-
+  const toastMethod = messageType === "warning" ? "warning" : "error";
+  return iziToast[toastMethod](config);
 };
 
 export function showLoader() {
@@ -24,8 +26,6 @@ export function showLoader() {
   loader.classList.add('loader');
   loader.textContent = 'Loading images, please wait...';
   document.body.appendChild(loader);
-  return loader;
-
 }
 
 export function hideLoader() {
