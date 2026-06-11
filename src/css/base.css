@@ -65,7 +65,6 @@ img {
     padding: 11px 16px;
     padding-inline-end: 118px;
 
-
     &::placeholder {
       font-family: var(--font-mont), sans-serif;
       font-weight: 400;
@@ -73,6 +72,10 @@ img {
       line-height: 150%;
       letter-spacing: 0.04em;
       color: #808080;
+    }
+
+    &:active {
+      border-color: #4E75FF;
     }
 
   }
@@ -84,6 +87,16 @@ img {
     padding: 8px 16px;
     width: 91px;
     height: 40px;
+    color: #fff;
+    font-family: var(--font-mont), sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+
+    &:hover {
+      background: #6c8cff;
+    }
   }
 }
 
@@ -106,6 +119,9 @@ img {
         font-size: 16px !important;
         font-weight: 400 !important;
         letter-spacing: 0.03em;
+        color: #fafafb !important;
+      }
+      & .iziToast-message {
         color: #fafafb !important;
       }
     }
