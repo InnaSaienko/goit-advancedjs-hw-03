@@ -3,7 +3,7 @@ import{S as f,i as m,a as u}from"./assets/vendor-BTRK9AdA.js";(function(){const 
           <img
             class="gallery-image"
             src=${r.webformatURL}
-            alt=${r.tags}
+            alt="${r.tags}"
             loading="lazy"
           />
         </a>
