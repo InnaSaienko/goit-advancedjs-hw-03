@@ -61,7 +61,7 @@ export function createGallery(images) {
           <img
             class="gallery-image"
             src=${image.webformatURL}
-            alt=${image.tags}
+            alt="${image.tags}"
             loading="lazy"
           />
         </a>
