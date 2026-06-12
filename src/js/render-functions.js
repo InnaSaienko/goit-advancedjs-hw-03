@@ -3,6 +3,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
 import "simplelightbox/dist/simple-lightbox.min.css";
 
+
 //Show message form according state
 const messages = {
   warning: "Sorry, there are no images matching your search query. Please try again!",
@@ -30,13 +31,15 @@ export const showToast = (messageType) => {
 
 export function showLoader() {
   const loader = document.createElement('div');
-  loader.classList.add('loader');
-  loader.textContent = 'Loading images, please wait...';
+  loader.classList.add('loader-wrapper');
+  const span = document.createElement('span');
+  span.classList.add('loader');
+  loader.appendChild(span);
   document.body.appendChild(loader);
 }
 
 export function hideLoader() {
-  const loader = document.querySelector('.loader');
+  const loader = document.querySelector('.loader-wrapper');
   loader.remove();
 }
 
