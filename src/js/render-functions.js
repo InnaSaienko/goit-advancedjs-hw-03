@@ -23,7 +23,7 @@ export const showToast = (messageType) => {
     title: messageType === 'warning' ? "No Images Found" : "Error",
     message: messages[messageType],
     position: 'topRight',
-    timeout: 5000,
+    timeout: 50000000,
   };
   const toastMethod = messageType === "warning" ? "warning" : "error";
   return iziToast[toastMethod](config);
