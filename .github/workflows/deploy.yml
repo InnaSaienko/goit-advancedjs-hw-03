@@ -15,6 +15,7 @@ jobs:
         env:
           VITE_PIXABAY_API_KEY: ${{ secrets.VITE_PIXABAY_API_KEY }}
         run: |
+          echo "Length of key: ${#VITE_PIXABAY_API_KEY}"
           npm install
           npm run build
 
